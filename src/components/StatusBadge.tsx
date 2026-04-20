@@ -23,7 +23,7 @@ export const StatusBadge = () => {
     return (
         <div className='flex items-center gap-2'>
             <span className={`h-2.5 w-2.5 rounded-full ${color}`} aria-hidden='true'></span>
-            <span className='text-sm font-medium text-slate-300'>{text}</span>
+            <span className='text-sm font-medium text-gray-700 dark:text-slate-300'>{text}</span>
         </div>
     )
 }

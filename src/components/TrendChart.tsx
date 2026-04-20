@@ -8,7 +8,7 @@ import {
     Tooltip,
     ResponsiveContainer
 } from 'recharts'
-import type { WeatherDataPoint } from '../hooks/useWeather'
+import type { WeatherDataPoint } from '@/types/weather'
 
 interface TrendChartProps {
     data: WeatherDataPoint[]
@@ -20,14 +20,14 @@ interface TrendChartProps {
 export const TrendChart = memo(({ data, dataKey, title, color }: TrendChartProps) => {
     if (!data || data.length === 0) {
         return (
-            <div className='col-span-1 lg:col-span-2 bg-slate-900/50 p-6 rounded-2xl border border-slate-800 flex items-center justify-center min-h-87.5'>
-                <span className='text-slate-500 italic'>Esperando datos para la gráfica...</span>
+            <div className='col-span-1 lg:col-span-2 bg-white dark:bg-slate-900/50 p-6 rounded-2xl border  border-gray-400 dark:border-slate-800 flex items-center justify-center min-h-87.5'>
+                <span className='text-gray-700 italic'>Esperando datos para la gráfica...</span>
             </div>
         )
     }
 
     return (
-        <div className='col-span-1 lg:col-span-2 bg-slate-900/50 p-6 rounded-2xl border border-slate-800 backdrop-blur-sm transition-all hover:bg-slate-800/50 hover:border-slate-700'>
+        <div className='col-span-1 lg:col-span-2 bg-white dark:bg-slate-900/50 p-6 rounded-2xl border dark:border-slate-800 backdrop-blur-sm transition-all hover:bg-slate-800/50 hover:border-slate-700'>
             <h3 className='text-sm font-medium text-slate-400 mb-6'>{title}</h3>
             <div className='h-75 w-full'>
                 <ResponsiveContainer width='100%' height='100%'>
