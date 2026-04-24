@@ -5,9 +5,9 @@ export interface WeatherData {
     uvs: number | null
     als: number | null
     temp: number | null
+    Temperaturesht10: number | null
     pressure: number | null
-    alt: number | null
-    windspeed: number | null
+    humedity: number | null
 }
 
 export interface WeatherDataPoint extends WeatherData {

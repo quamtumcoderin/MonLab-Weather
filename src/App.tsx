@@ -20,6 +20,8 @@ const ChartSkeleton = () => (
 export const App = () => {
   const { data, history, connect, disconnect } = useWeatherStore()
 
+  console.log(data)
+
   useEffect(() => {
     connect()
     return () => {
@@ -68,7 +70,7 @@ export const App = () => {
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6'>
             <TrendChart
               data={history}
-              dataKey='temp'
+              dataKey='Temperaturesht10'
               title='Tendencia de Temperatura (ºC)'
               color='#f97316'
             />

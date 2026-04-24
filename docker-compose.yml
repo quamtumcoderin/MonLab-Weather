@@ -3,10 +3,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - VITE_MQTT_URL=${VITE_MQTT_URL}
+        - VITE_MQTT_TOPIC=${VITE_MQTT_TOPIC}
     container_name: monlab-weather-app
     ports:
       - "8080:80"
     restart: always
+    env_file:
+      - .env
     networks:
       - weather-network
 

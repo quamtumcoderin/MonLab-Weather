@@ -1,6 +1,6 @@
 import {
     Thermometer,
-    Wind,
+    Bubbles,
     Sun,
     Gauge,
     Mountain,
@@ -17,16 +17,22 @@ export interface MetricConfig {
 }
 
 export const metricsConfig: Record<string, MetricConfig> = {
-    temp: {
-        title: 'Temperatura',
+    Temperaturesht10: {
+        title: 'Temperatura (SHT10)',
         unit: 'ºC',
         icon: <Thermometer className='w-6 h-6' />,
         colorClass: 'text-orange-500'
     },
-    wind: {
-        title: 'Viento',
-        unit: 'km/h',
-        icon: <Wind className='w-6 h-6' />,
+    temp: {
+        title: 'Temperatura (Normal)',
+        unit: 'ºC',
+        icon: <Thermometer className='w-6 h-6' />,
+        colorClass: 'text-sky-500'
+    },
+    humeditysht10: {
+        title: 'Humedad',
+        unit: '%',
+        icon: <Bubbles className='w-6 h-6' />,
         colorClass: 'text-sky-500'
     },
     uvs: {
