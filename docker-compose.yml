@@ -1,0 +1,15 @@
+services:
+  monlab-weather:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: monlab-weather-app
+    ports:
+      - "8080:80"
+    restart: always
+    networks:
+      - weather-network
+
+networks:
+  weather-network:
+    driver: bridge
