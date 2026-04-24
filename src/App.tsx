@@ -20,8 +20,6 @@ const ChartSkeleton = () => (
 export const App = () => {
   const { data, history, connect, disconnect } = useWeatherStore()
 
-  console.log(data)
-
   useEffect(() => {
     connect()
     return () => {
